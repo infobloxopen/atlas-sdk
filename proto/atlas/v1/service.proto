@@ -4,10 +4,11 @@ package service;
 
 import "google/api/annotations.proto";
 import "google/protobuf/field_mask.proto";
+import "google/protobuf/timestamp.proto";
+
 import "github.com/infobloxopen/atlas-app-toolkit/query/collection_operators.proto";
 import "github.com/infobloxopen/protoc-gen-gorm/types/types.proto";
 import "github.com/infobloxopen/protoc-gen-gorm/options/gorm.proto";
-import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/Infoblox-CTO/ngp.authz/dbapiserver/pkg/pb;pb";
 

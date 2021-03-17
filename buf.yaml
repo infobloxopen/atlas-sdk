@@ -1,11 +1,17 @@
 # https://docs.buf.build/lint-usage/
 version: v1beta1
+name: infoblox.com/infobloxopen/atlas-app-toolkit
 build:
   roots:
-    - proto
+    #- proto
+    - third_party/proto
 lint:
   use:
     - DEFAULT
-  ignore:
-    - protoc-gen-openapiv2
-    - google
+  ignore_only:
+    PACKAGE_VERSION_SUFFIX:
+    - google/api/annotations.proto
+    - google/api/http.proto
+breaking:
+  use:
+    - FILE

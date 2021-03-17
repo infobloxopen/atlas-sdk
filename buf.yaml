@@ -3,8 +3,9 @@ version: v1beta1
 name: infoblox.com/infobloxopen/atlas-app-toolkit
 build:
   roots:
-    #- proto
+    - proto
     - third_party/proto
+    - vendor
 lint:
   use:
     - DEFAULT

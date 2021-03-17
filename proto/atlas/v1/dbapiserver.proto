@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package service;
+package dbapiserver;
 
 import "google/api/annotations.proto";
 import "google/protobuf/field_mask.proto";
@@ -341,15 +341,4 @@ message GetEffectivePermissionsRequest {
 
 message GetEffectivePermissionsResponse {
     repeated Permission results = 1;
-}
-
-message ReindexRequest {
-	string account_id = 1;
-	string dataType = 2;
-}
-
-message ReindexResponse {}
-
-service ReindexService {
-	rpc Reindex(ReindexRequest) returns (ReindexResponse) {}
 }

@@ -1,0 +1,11 @@
+# https://docs.buf.build/lint-usage/
+version: v1beta1
+build:
+  roots:
+    - proto
+lint:
+  use:
+    - DEFAULT
+  ignore:
+    - protoc-gen-openapiv2
+    - google

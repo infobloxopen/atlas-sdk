@@ -9,10 +9,18 @@ build:
 lint:
   use:
     - DEFAULT
+  ignore:
+    - google/api
+    - protoc-gen-openapiv2
+    - github.com/infobloxopen
+    - github.com/grpc-ecosystem
   ignore_only:
-    PACKAGE_VERSION_SUFFIX:
-    - google/api/annotations.proto
-    - google/api/http.proto
+    RPC_REQUEST_STANDARD_NAME:
+      - atlas/authz/v1/dbapiserver.proto
+    RPC_RESPONSE_STANDARD_NAME:
+      - atlas/authz/v1/dbapiserver.proto
+    SERVICE_SUFFIX:
+      - atlas/authz/v1/dbapiserver.proto
 breaking:
   use:
     - FILE

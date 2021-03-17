@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package dbapiserver;
+package atlas.authz.v1;
 
 import "google/api/annotations.proto";
 import "google/protobuf/field_mask.proto";
@@ -329,7 +329,7 @@ message GetRoleUpdatesResponse {
 }
 
 service EffectivePermissions {
-    rpc GetEffectivePermissions (GetEffectivePermissionsRequest) returns (GetEffectivePermissionsResponse) {
+    rpc GetEffectivePermissions(GetEffectivePermissionsRequest) returns (GetEffectivePermissionsResponse) {
         option (google.api.http) = {
             get: "/effective_permissions"
         };
